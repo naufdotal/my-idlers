@@ -67,16 +67,26 @@ php artisan cache:clear
 * Easy to edit values
 * Assign notes
 
+## PHP 
+
+* Add apt repository ppa ondrej `sudo add-apt-repository ppa:ondrej/php`
+* Update system `sudo apt update`
+* Install php8.2-fpm zip mbstring curl `sudo apt install php8.2-fpm php8.2-zip zip php8.2-curl php8.2-mbstring`
+
 ## Install
 
 * Run `git clone https://github.com/cp6/my-idlers.git` into your directory of choice
 * Run `composer install`
 * Run `cp .env.example .env`
-* Edit (If needed) MySQL details in .env
 * Run `php artisan key:generate`
-* Run `php artisan make:database my_idlers` to create database
 * Run `php artisan migrate:fresh --seed` to create tables and seed data
 * Run `php artisan serve`
+
+## SQLITE
+
+* Update in .env `DB_CONNECTION=sqlite
+DB_DATABASE=/absolute/path/to/database.sqlite`
+* Create database sqlite `touch database/database.sqlite`
 
 ## Updating
 
